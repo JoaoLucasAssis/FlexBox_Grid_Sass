@@ -21,3 +21,14 @@ display: flex; /*torna os elementos flexíveis*/
 display: inline-flex; /*torna os elementos flexíveis e muda sua direção*/
 display: grid; /*define um layout baseado em linhas e colunas*/
 ```
+
+## Flex Direction Property
+
+`flex-direction` define como os itens flexíveis são colocados no contêiner flexível
+
+```css
+flex-direction: row; /*horizontal*/
+flex-direction: row-reverse; /*inverte o sentido e a ordem dos filhos*/
+flex-direction: column; /*vertical*/
+flex-direction: column-reverse; /*inverte a ordem dos filhos*/
+```
