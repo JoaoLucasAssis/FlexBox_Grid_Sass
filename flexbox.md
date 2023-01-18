@@ -67,3 +67,14 @@ justify-content: space-between; /*distribui espaço entre os elementos filhos, a
 justify-content: space-around; /*distribui espaço entre os elementos filhos e entre a esquerda e a direita*/
 justify-content: space-evenly; /*distribui espaço igual entre os elementos*/
 ```
+
+## Align Items Property
+
+`align-items` define como o espaço é distribuído ao longo do eixo cruzado
+
+```css
+align-items: center;
+align-items: flex-start;
+align-items: flex-end;
+align-items: baseline;
+```
