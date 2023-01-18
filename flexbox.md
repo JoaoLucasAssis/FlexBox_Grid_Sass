@@ -32,3 +32,13 @@ flex-direction: row-reverse; /*inverte o sentido e a ordem dos filhos*/
 flex-direction: column; /*vertical*/
 flex-direction: column-reverse; /*inverte a ordem dos filhos*/
 ```
+
+## Flex Wrap Property
+
+`flex-wrap` define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas
+
+```css
+flex-wrap: nowrap; /*mesma linha*/
+flex-wrap: wrap; /*permite quebra de linha para baixo*/
+flex-wrap: wrap-reverse; /*inverte o sentido da quebra de linha*/
+```
