@@ -11,7 +11,7 @@ Algumas propriedades afetam os elementos pais e outras os elementos filhos
 | container (pai) | items (filho) |
 |:---------------:|:-------------:|
 | flex-direction  | order |
-| flex-wrap       | 
+| flex-wrap       | flex-grow |
 | flex-flow       |
 | justify-content |
 | align-items     |
@@ -112,3 +112,14 @@ Altera a ordem visual dos elementos
 |esquerda|centro|direita|
 |:------:|:----:|:-----:|
 |..., -3, -2, -1| 0    |1, 2, 3, ... |
+
+## Flex Grow Property
+
+`flex-grow` define o fator de crescimento flexível do tamanho principal do item
+
+Define o quanto a largura e altura de um elemento podem crescer acordo com os demais filhos
+
+```css
+flex-grow: 0; /*tamanho fixo*/
+flex-grow: 2; /*tamanho flexível até duas vezes o tamanho principal*/
+```
