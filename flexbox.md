@@ -70,11 +70,26 @@ justify-content: space-evenly; /*distribui espaço igual entre os elementos*/
 
 ## Align Items Property
 
-`align-items` define como o espaço é distribuído ao longo do eixo cruzado
+`align-items` alinha os elementos filhos dentro do elemento pai ao longo do eixo cruzado
 
 ```css
 align-items: center;
 align-items: flex-start;
 align-items: flex-end;
 align-items: baseline;
+```
+
+## Align Content Property
+
+`align-content` define o alinhamento ao longo do eixo cruzado das linhas flex de acordo ao flex container
+
+Possui os mesmos valores da propriedade `justify-content`
+
+```css
+align-content: flex-start; /*coloca os elementos no começo*/
+align-content: center; /*coloca os elementos no centro*/
+align-content: flex-end; /*coloca os elementos no final*/
+align-content: space-between; /*distribui espaço entre os elementos filhos, apenas entre eles*/
+align-content: space-around; /*distribui espaço entre os elementos filhos e entre a esquerda e a direita*/
+align-content: space-evenly; /*distribui espaço igual entre os elementos*/
 ```
