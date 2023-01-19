@@ -10,16 +10,16 @@ Algumas propriedades afetam os elementos pais e outras os elementos filhos
 
 | container (pai) | items (filho) |
 |:---------------:|:-------------:|
-| flex-direction  | order |
-| flex-wrap       | flex-grow |
-| flex-flow       | flex-shrink |
-| justify-content | flex-basis |
-| align-items     | flex   |
-| align-content   |
+| flex-direction  | order         |
+| flex-wrap       | flex-grow     |
+| flex-flow       | flex-shrink   |
+| justify-content | flex-basis    |
+| align-items     | flex          |
+| align-content   | align-self    |
 
 ## Display Property
 
-`display` define se um elemento é tratado como **block** ou **inline** 
+`display` define se um **elemento pai** é tratado como **block** ou **inline** 
 
 Define também o layout usado para seus filhos
 
@@ -157,4 +157,19 @@ flex-basis: auto;
 
 ```css
 flex: <flex-basis> <flex-grow> <flex-shrink>;
+```
+
+## Align Self Property
+
+`align-self` substitui o valor `align-items`
+
+Alinha o elemento filho ao longo do eixo cruzado
+
+No Grid, alinha o item dentro da área do grid
+
+```css
+align-self: center;
+align-self: flex-start;
+align-self: flex-end;
+align-self: baseline;
 ```
