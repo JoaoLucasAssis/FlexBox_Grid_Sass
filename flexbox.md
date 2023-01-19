@@ -14,7 +14,7 @@ Algumas propriedades afetam os elementos pais e outras os elementos filhos
 | flex-wrap       | flex-grow |
 | flex-flow       | flex-shrink |
 | justify-content | flex-basis |
-| align-items     |
+| align-items     | flex   |
 | align-content   |
 
 ## Display Property
@@ -147,4 +147,14 @@ flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: 50%;
 flex-basis: auto;
+```
+
+## Flex Property
+
+`flex` define um tamanho inicial e o quanto o elemento crescerá ou encolherá
+
+É uma propriedade abreviada para as propriedades `flex-basis`, `flex-grow` e `flex-shrink`
+
+```css
+flex: <flex-basis> <flex-grow> <flex-shrink>;
 ```
