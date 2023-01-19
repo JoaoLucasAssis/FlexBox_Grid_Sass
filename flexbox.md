@@ -13,7 +13,7 @@ Algumas propriedades afetam os elementos pais e outras os elementos filhos
 | flex-direction  | order |
 | flex-wrap       | flex-grow |
 | flex-flow       | flex-shrink |
-| justify-content |
+| justify-content | flex-basis |
 | align-items     |
 | align-content   |
 
@@ -133,4 +133,18 @@ Define o quanto a largura e altura de um elemento podem diminuir acordo com os d
 ```css
 flex-shrink: 0; /*tamanho fixo*/
 flex-shrink: 2; /*tamanho flexível reduzido até duas vezes o tamanho principal*/
+```
+
+## Flex Basis Property
+
+`flex-basis` define o tamanho principal inicial de um item
+
+É especificada como a palavra-chave `width`
+
+```css
+/*define o width*/
+flex-basis: 10em;
+flex-basis: 3px;
+flex-basis: 50%;
+flex-basis: auto;
 ```
