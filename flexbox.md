@@ -12,7 +12,7 @@ Algumas propriedades afetam os elementos pais e outras os elementos filhos
 |:---------------:|:-------------:|
 | flex-direction  | order |
 | flex-wrap       | flex-grow |
-| flex-flow       |
+| flex-flow       | flex-shrink |
 | justify-content |
 | align-items     |
 | align-content   |
@@ -121,5 +121,16 @@ Define o quanto a largura e altura de um elemento podem crescer acordo com os de
 
 ```css
 flex-grow: 0; /*tamanho fixo*/
-flex-grow: 2; /*tamanho flexível até duas vezes o tamanho principal*/
+flex-grow: 2; /*tamanho flexível aumentado até duas vezes o tamanho principal*/
+```
+
+## Flex Shrink Property
+
+`flex-shrink` define o fator de redução flexível de um item
+
+Define o quanto a largura e altura de um elemento podem diminuir acordo com os demais filhos
+
+```css
+flex-shrink: 0; /*tamanho fixo*/
+flex-shrink: 2; /*tamanho flexível reduzido até duas vezes o tamanho principal*/
 ```
