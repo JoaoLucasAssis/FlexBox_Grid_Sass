@@ -4,6 +4,8 @@ Tem o objetivo de tornar a interação digital o mais simples, fluida, intuitiva
 
 Garantir facilidade de acesso, compreensão e uso, maximizando a experiência do usuário
 
+![imagem da pagina criada na seção 2](https://github.com/JoaoLucasAssis/udemy_flexbox_grid_sass/blob/main/secao_2/images/page.png)
+
 ## Espaço em Branco
 
 Ajuda a hierarquizar as informações criando distância entre os elementos
