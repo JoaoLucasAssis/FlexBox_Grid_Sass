@@ -8,6 +8,15 @@ Cria um layout flexível dentro de um elemento pai, reorganizando-se e acordo co
 
 Algumas propriedades afetam os elementos pais e outras os elementos filhos
 
+| container (pai) | items (filho) |
+|:---------------:|:-------------:|
+| flex-direction  | order |
+| flex-wrap       | 
+| flex-flow       |
+| justify-content |
+| align-items     |
+| align-content   |
+
 ## Display Property
 
 `display` define se um elemento é tratado como **block** ou **inline** 
@@ -93,3 +102,13 @@ align-content: space-between; /*distribui espaço entre os elementos filhos, ape
 align-content: space-around; /*distribui espaço entre os elementos filhos e entre a esquerda e a direita*/
 align-content: space-evenly; /*distribui espaço igual entre os elementos*/
 ```
+
+## Order Property
+
+`order` define a ordem de disposição de um item em um contêiner flex ou grid
+
+Altera a ordem visual dos elementos 
+
+|esquerda|centro|direita|
+|:------:|:----:|:-----:|
+|..., -3, -2, -1| 0    |1, 2, 3, ... |
