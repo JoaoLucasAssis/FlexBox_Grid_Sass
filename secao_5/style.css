@@ -152,6 +152,97 @@ ul.header__nav__links li a:hover::after {
     transform: scaleX(1);
 }
 
+/********** hero section **********/
+
+section#showcase {
+    height: 100vh;
+
+    background-image: url('img/background-image.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.showcase__content {
+    background-color: var(--secondary-color-m);
+    padding: calc(1rem + 2vw);
+    height: calc(5rem + 20vmax);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    animation: content 2s;
+}
+
+@keyframes content {
+    0% {
+        transform: translateX(100rem) rotateZ(360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.showcase__content__title {
+    font-size: calc(2rem + 3vw);
+    color: white;
+}
+
+.showcase__content__pg {
+    font-family: 'Indie Flower', cursive;
+    font-size: calc(1.5rem + 1vw);
+    color: white;
+}
+
+.showcase__content__link:link,
+.showcase__content__link:visited {
+    padding: 1rem 0;
+    transition: all .4s;
+    width: 9rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    position: relative;
+
+    z-index: 1;
+}
+
+.showcase__content__link::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--primary-color);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .45s;
+
+    z-index: -1;
+}
+
+.showcase__content__link:hover::after {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 900px) {
+    section#showcase {
+        background-position: 100%;
+        align-items: flex-end;
+    }
+}
+
 @media screen and (max-width: 600px) {
     header#header {
         position: absolute;
@@ -213,4 +304,10 @@ ul.header__nav__links li a:hover::after {
     .clicked .line-3 {
         transform: rotateZ(45deg)  translate(-0.6rem, -0.8rem);
     }
+
+    section#showcase {
+        background-position: 100%;
+        align-items: flex-end;
+    }
 }
+
