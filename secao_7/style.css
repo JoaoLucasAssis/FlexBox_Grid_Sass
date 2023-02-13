@@ -40,6 +40,35 @@ body {
     background-color: var(--color-quaternary);
 }
 
+a:link,
+a:visited {
+    color: var(--color-quaternary);
+    text-decoration: none;
+    font-size: calc(0.5rem + 1vw);
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    position: relative;
+    transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+    z-index: 1;
+}
+
+p {
+    color: white;
+
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+i {
+    font-size: var(--font-size-title);
+    color: var(--color-secondary);
+}
+
 .container {
     display: grid;
     grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
@@ -49,8 +78,177 @@ body {
 /**-*-*-*-*-*-*-*-* header section  *-*-*-*-*-*-*-*-*-*/
 
 header#header {
-    background-color: var(--color-primary);
     grid-column: container-start / container-end;
+
+    background: linear-gradient(var(--color-primary-m-light), var(--color-primary-m-light)), url("img/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header__main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.header__main-nav input[type="checkbox"] {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+}
+
+.header__main-nav__hamburger {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    animation: main-nav__hamburger 2s;
+}
+
+@keyframes main-nav__hamburger {
+    from {
+        transform: translateX(150rem) rotate(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0rem) rotate(0);
+        opacity: 1;
+    }
+}
+
+.header__main-nav__hamburger>div {
+    position: relative;
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--color-quaternary);
+    transition: all var(--transition-duration) ease-in-out;
+
+    display: grid;
+    place-items: center;
+}
+
+.header__main-nav__hamburger>div::before,
+.header__main-nav__hamburger>div::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: inherit;
+    background-color: inherit;
+    z-index: 2;
+}
+
+.header__main-nav__hamburger>div::before {
+    top: -1rem;
+    left: 0;
+}
+
+.header__main-nav__hamburger>div::after {
+    top: 1rem;
+    right: 0;
+}
+
+.header__main-nav input[type="checkbox"]:checked+.header__main-nav__hamburger>div {
+    transform: rotate(135deg);
+}
+
+.header__main-nav input[type="checkbox"]:checked+.header__main-nav__hamburger>div::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: rotate(270deg);
+}
+
+.header__main-nav input[type="checkbox"]:checked+.header__main-nav__hamburger>div::after {
+    opacity: 0;
+}
+
+.header__main-nav input[type="checkbox"]:checked:hover+.header__main-nav__hamburger>div {
+    transform: rotate(45deg);
+}
+
+.header__main-nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+
+    display: grid;
+    place-items: center;
+}
+
+.header__main-nav__menu>div {
+    width: 200%;
+    height: 200%;
+    background-color: var(--color-secondary-m-dark);
+    transform: scaleX(0);
+    transition: all var(--transition-duration) ease-in-out;
+
+    display: grid;
+    place-items: center;
+}
+
+.header__main-nav__menu>div>div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.header__main-nav input[type="checkbox"]:checked~.header__main-nav__menu {
+    visibility: visible;
+}
+
+.header__main-nav input[type="checkbox"]:checked~.header__main-nav__menu>div {
+    transform: scaleX(1);
+}
+
+.header__main-nav input[type="checkbox"]:checked~.header__main-nav__menu>div>div {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.header__main-nav__menu ul li a:link,
+.header__main-nav__menu ul li a:visited {
+    z-index: 5;
+    font-size: calc(1.5rem + 0.5vw);
+}
+
+.header__main-nav__menu ul li a:link::before,
+.header__main-nav__menu ul li a:visited::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary-m-dark);
+    z-index: -1;
+    transform: scaleY(0);
+    transition: all var(--transition-duration);
+}
+
+.header__main-nav__menu ul li a:hover::before,
+.header__main-nav__menu ul li a:active::before {
+    transform: scaleY(1);
 }
 
 /**-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
