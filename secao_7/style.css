@@ -1,0 +1,150 @@
+/* reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**-*-*-*-*-*-*-*-* reusable components  *-*-*-*-*-*-*-*-*-*/
+:root {
+    font-size: 62.5%;
+
+    --color-primary: #730039;
+    --color-primary-m-light: hsla(330, 100%, 23%, 0.55);
+    --color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
+
+    --color-secondary: #ffc513;
+    --color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
+    --color-secondary-m-dark: rgba(255, 197, 19, 0.85);
+
+    --color-tertiary: #ff724c;
+    --color-tertiary-m-light: hsla(13, 100%, 65%, 0.55);
+    --color-tertiary-m-dark: rgba(255, 115, 77, 0.85);
+
+    --color-quaternary: #f6eedf;
+    --color-quaternary-m-light: hsla(39, 56%, 92%, 0.55);
+    --color-quaternary-m-light: rgba(246, 238, 223, 0.85);
+
+    --transition-duration: 0.3s;
+
+    --font-size-title: calc(2rem + 2vw);
+
+    --padding-section: 8vh 3vw;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.7;
+    background-color: var(--color-quaternary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+    grid-template-rows: 100vh repeat(8, min-content);
+}
+
+/**-*-*-*-*-*-*-*-* header section  *-*-*-*-*-*-*-*-*-*/
+
+header#header {
+    background-color: var(--color-primary);
+    grid-column: container-start / container-end;
+}
+
+/**-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
+
+section#booking-content {
+    background-color: var(--color-secondary);
+    grid-column: center-start / col-end 6;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
+
+section#booking-date {
+    background-color: var(--color-tertiary);
+    grid-column: col-start 7 / center-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* villas section  *-*-*-*-*-*-*-*-*-*/
+
+section#villas {
+    background-color: var(--color-primary);
+    grid-column: container-start / container-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* motto section  *-*-*-*-*-*-*-*-*-*/
+
+section#motto {
+    background-color: var(--color-secondary);
+    grid-column: container-start / container-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* events-content section  *-*-*-*-*-*-*-*-*-*/
+
+section#events-content {
+    background-color: var(--color-tertiary);
+    grid-column: container-start / col-end 9;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* events-text section  *-*-*-*-*-*-*-*-*-*/
+
+section#events-text {
+    background-color: var(--color-primary);
+    grid-column: col-start 10 / center-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* gallery-text section  *-*-*-*-*-*-*-*-*-*/
+
+section#gallery-text {
+    background-color: var(--color-secondary);
+    grid-column: center-start / col-end 1;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* gallery-carousel section  *-*-*-*-*-*-*-*-*-*/
+
+section#gallery-carousel {
+    background-color: var(--color-tertiary);
+    grid-column: col-start 2 / container-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* features-content section  *-*-*-*-*-*-*-*-*-*/
+
+section#features-content {
+    background-color: var(--color-primary);
+    grid-column: container-start / col-end 9;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* features-text section  *-*-*-*-*-*-*-*-*-*/
+
+section#features-text {
+    background-color: var(--color-secondary);
+    grid-column: col-start 10 / center-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* testemonials section  *-*-*-*-*-*-*-*-*-*/
+
+section#testemonials {
+    background-color: var(--color-tertiary);
+    grid-column: center-start / center-end;
+    height: 400px;
+}
+
+/**-*-*-*-*-*-*-*-* footer section  *-*-*-*-*-*-*-*-*-*/
+
+footer#footer {
+    background-color: var(--color-primary);
+    grid-column: container-start / container-end;
+    height: 400px;
+}

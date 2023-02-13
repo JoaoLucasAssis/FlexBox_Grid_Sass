@@ -1,6 +1,6 @@
 # FlexBox Properties and Concepts
 
-Flexbox é um conceito de CSS3 que visa organizar os elementos HTML de uma forma dinâmica
+É um sistema de estruturação de layout que trabalha em uma única dimensão
 
 É um modo eficiente de alinhar e distribuir espaço entre os elementos
 
@@ -161,11 +161,7 @@ flex: <flex-basis> <flex-grow> <flex-shrink>;
 
 ## Align Self Property
 
-`align-self` substitui o valor `align-items`
-
 Alinha o elemento filho ao longo do eixo cruzado
-
-No Grid, alinha o item dentro da área do grid
 
 ```css
 align-self: center;

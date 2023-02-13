@@ -102,10 +102,6 @@ nav#header__nav {
     height: 100%;
 }
 
-.clicked {
-    left: 55%;
-}
-
 ul.header__nav__links {
     width: 100%;
     height: 100%;
@@ -375,6 +371,7 @@ section#services {
 .service {
     padding: 4rem;
     margin: 0 2rem 4rem;
+    flex-basis: 40rem;
     flex-grow: 1;
     background-color: var(--secondary-color);
     border-bottom: 0.2rem solid var(--secondary-color);
@@ -422,6 +419,277 @@ section#services {
     color: white;
 }
 
+/*-*-*-*-*-*-*-*-*-* skills section *-*-*-*-*-*-*-*-*-*/
+
+section#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: calc(1rem + 2vw);
+    background-color: var(--tertiary-color);
+}
+
+.skills__design,
+.skills__coding {
+    padding: calc(1rem + 2vw);
+    text-transform: uppercase;
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
+
+.skills__design__title,
+.skills__coding__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.skills__design h4,
+.skills__coding h4 {
+    font-size: 2rem;
+    color: white;
+}
+
+.skills__design__progress, 
+.skills__coding__progress {
+    position: relative;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--primary-color);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.skills__design__progress span, 
+.skills__coding__progress span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: var(--secondary-color);
+}
+
+.skills__design__progress-1 {
+    animation: design-1 4s infinite ease-in-out;
+}
+
+@keyframes design-1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.skills__design__progress-2 {
+    animation: design-2 4s infinite ease-in-out;
+}
+
+@keyframes design-2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+.skills__design__progress-3 {
+    animation: design-3 4s infinite ease-in-out;
+}
+
+@keyframes design-3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+.skills__design__progress-4 {
+    animation: design-4 4s infinite ease-in-out;
+}
+
+@keyframes design-4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+.skills__coding__progress-1 {
+    animation: coding-1 4s infinite ease-in-out;
+}
+
+@keyframes coding-1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+.skills__coding__progress-2 {
+    animation: coding-2 4s infinite ease-in-out;
+}
+
+@keyframes coding-2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.skills__coding__progress-3 {
+    animation: coding-3 4s infinite ease-in-out;
+}
+
+@keyframes coding-3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+.skills__coding__progress-4 {
+    animation: coding-4 4s infinite ease-in-out;
+}
+
+@keyframes coding-4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+/*-*-*-*-*-*-*-*-*-* testemonials section *-*-*-*-*-*-*-*-*-*/
+
+section#testemonials {
+    padding: calc(1rem + 2vw);
+    background-color: var(--secondary-color);
+    color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.testemonials__card {
+    padding: 2vw;
+    flex-basis: 50rem;
+    flex-grow: 1;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.testemonials__card__img {
+    width: 100%;
+    height: 100%;
+}
+
+.testemonials__card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s;
+}
+
+.testemonials__card__content {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 80%;
+    background-color: var(--tertiary-color-m);
+    padding: 1.5rem;
+
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: all .35s;
+}
+
+.testemonials__card:hover .testemonials__card__content {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.testemonials__card__content__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.testemonials__card__content__pg {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.5rem;
+}
+
+/*-*-*-*-*-*-*-*-*-* contact section *-*-*-*-*-*-*-*-*-*/
+
+section#contact {
+    height: 100vh;
+    background-image: url("img/background-image.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.contact__form {
+    flex-basis: 40rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-color-m);
+}
+
+.contact__form input,
+.contact__form textarea {
+    color: white;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    padding: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.1rem solid var(--secondary-color);
+}
+
+.contact__form textarea {
+    height: 30vh;
+}
+
+.contact__form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1510px) {
+    body {
+        width: 1510px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 900px) {
     section#showcase {
         background-position: 100%;
@@ -439,7 +707,7 @@ section#services {
         height: 100%;
         position: fixed;
         top: 0;
-        right: -30rem;
+        left: 100%;
         background-color: var(--secondary-color);
         text-align: center;
     }
@@ -479,6 +747,10 @@ section#services {
         margin-left: 6vw;
     }
 
+    .clicked {
+        left: 50%;
+    }
+
     .clicked .line-1 {
         transform: rotateZ(-45deg) translate(-0.6rem, 0.8rem);
     }
@@ -505,11 +777,29 @@ section#services {
         margin: 0 0 calc(1rem + 2vw);
     }
 
-    .service__title {
+    .service__title,
+    .skills__design__title,
+    .skills__coding__title,
+    .testemonials__card__content__title {
         font-size: calc(1.2rem + 2vw);
     }
 
-    .service__pg {
+    .service__pg,
+    .skills__design h4,
+    .skills__coding h4,
+    .testemonials__card__content__pg {
         font-size: calc(0.8rem + 1.5vw);
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .testemonials__card__content {
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    section#contact {
+        background-position: 10% 5%;
     }
 }

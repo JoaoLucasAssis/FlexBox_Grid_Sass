@@ -1,6 +1,11 @@
+//variáveis
 const headerNav = document.querySelector("#header__nav");
-const links = document.querySelectorAll(".header__nav__links li");
+const headerHamburgerNav = document.querySelector(".header__nav__hamburger")
 
+//eventos
+headerHamburgerNav.addEventListener("click", clicked());
+
+//funções
 function clicked() {
-    hamburgerContainer.classList.toggle(".clicked");
+    headerNav.classList.toggle(".clicked");
 }
