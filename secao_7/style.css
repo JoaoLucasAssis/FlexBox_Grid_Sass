@@ -56,7 +56,7 @@ p {
     color: white;
 
     font-size: calc(1rem + 1vw);
-    font-weight: 300;
+    font-weight: 200;
 }
 
 li {
@@ -343,7 +343,33 @@ section#booking-content {
     position: absolute;
     bottom: 0;
     left: 15%;
-    
+    height: 0.2rem;
+    width: 30%;
+    background-color: var(--color-secondary);
+}
+
+.booking-content__pg {
+    padding: 2rem;
+}
+
+#booking-content p {
+    color: var(--color-primary);
+}
+
+.booking-content__icons {
+    margin-left: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.booking-content__icons__weather,
+.booking-content__icons__time {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 10vh;
+    justify-items: start;
+    align-items: center;
 }
 
 /**-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
