@@ -1,4 +1,4 @@
-/* reset */
+/*-*-*-*-*-*-*-*-*-* reset *-*-*-*-*-*-*-*-*-*/
 *,
 *::before,
 *::after {
@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/**-*-*-*-*-*-*-*-* reusable components  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* reusable components  *-*-*-*-*-*-*-*-*-*/
 :root {
     font-size: 62.5%;
 
@@ -320,7 +320,7 @@ header#header {
     transform: scaleY(1);
 }
 
-/**-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
 
 section#booking-content {
     grid-column: center-start / col-end 6;
@@ -352,7 +352,8 @@ section#booking-content {
     padding: 2rem;
 }
 
-#booking-content p {
+#booking-content p,
+.booking-date__contact p {
     color: var(--color-primary);
 }
 
@@ -372,15 +373,102 @@ section#booking-content {
     align-items: center;
 }
 
-/**-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* booking-date section  *-*-*-*-*-*-*-*-*-*/
 
 section#booking-date {
-    background-color: var(--color-tertiary);
     grid-column: col-start 7 / center-end;
-    height: 400px;
+    padding: var(--padding-section);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
-/**-*-*-*-*-*-*-*-* villas section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-* booking-date schedule *-*-*-*-*-*-*/
+
+.booking-date__schedule {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2vh;
+    place-items: center;
+}
+
+.booking-date__schedule__arrival,
+.booking-date__schedule__departure,
+.booking-date__schedule__guests {
+    display: grid;
+    grid-row-gap: 3vh;
+}
+
+.booking-date__schedule__arrival h5,
+.booking-date__schedule__departure h5,
+.booking-date__schedule__guests h5 {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+}
+
+.booking-date__schedule__arrival>div,
+.booking-date__schedule__departure>div,
+.booking-date__schedule__guests>div {
+    background-color: var(--color-secondary);
+    padding: 2rem 4rem;
+    position: relative;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+}
+
+.booking-date__schedule__arrival>div::before,
+.booking-date__schedule__departure>div::before,
+.booking-date__schedule__guests>div::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 1.5rem;
+    border-style: solid;
+    border-color: transparent transparent var(--color-secondary) transparent;
+}
+
+.booking-date__schedule__arrival>div p:nth-of-type(2),
+.booking-date__schedule__departure>div p:nth-of-type(2),
+.booking-date__schedule__guests>div p:nth-of-type(2) {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/*-*-*-*-*-*-* booking-date contact *-*-*-*-*-*-*/
+
+.booking-date__contact {
+    align-self: end;
+}
+
+.booking-date__contact__link:link,
+.booking-date__contact__link:visited {
+    background-color: var(--color-secondary);
+    color: white;
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.booking-date__contact__link:hover,
+.booking-date__contact__link:active {
+    background-color: white;
+    color: var(--color-secondary);
+    border: 0.1rem solid var(--color-secondary);
+}
+
+.booking-date__contact p:first-of-type {
+    margin-top: 4rem;
+}
+
+.booking-date__contact p:first-of-type,
+.booking-date__contact p:nth-of-type(2),
+.booking-date__contact p:nth-of-type(3) {
+    font-size: 2rem;
+}
+
+/*-*-*-*-*-*-*-*-*-* villas section  *-*-*-*-*-*-*-*-*-*/
 
 section#villas {
     background-color: var(--color-primary);
@@ -388,7 +476,7 @@ section#villas {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* motto section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* motto section  *-*-*-*-*-*-*-*-*-*/
 
 section#motto {
     background-color: var(--color-secondary);
@@ -396,7 +484,7 @@ section#motto {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* events-content section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* events-content section  *-*-*-*-*-*-*-*-*-*/
 
 section#events-content {
     background-color: var(--color-tertiary);
@@ -404,7 +492,7 @@ section#events-content {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* events-text section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* events-text section  *-*-*-*-*-*-*-*-*-*/
 
 section#events-text {
     background-color: var(--color-primary);
@@ -412,7 +500,7 @@ section#events-text {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* gallery-text section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* gallery-text section  *-*-*-*-*-*-*-*-*-*/
 
 section#gallery-text {
     background-color: var(--color-secondary);
@@ -420,7 +508,7 @@ section#gallery-text {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* gallery-carousel section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* gallery-carousel section  *-*-*-*-*-*-*-*-*-*/
 
 section#gallery-carousel {
     background-color: var(--color-tertiary);
@@ -428,7 +516,7 @@ section#gallery-carousel {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* features-content section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* features-content section  *-*-*-*-*-*-*-*-*-*/
 
 section#features-content {
     background-color: var(--color-primary);
@@ -436,7 +524,7 @@ section#features-content {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* features-text section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* features-text section  *-*-*-*-*-*-*-*-*-*/
 
 section#features-text {
     background-color: var(--color-secondary);
@@ -444,7 +532,7 @@ section#features-text {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* testemonials section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* testemonials section  *-*-*-*-*-*-*-*-*-*/
 
 section#testemonials {
     background-color: var(--color-tertiary);
@@ -452,7 +540,7 @@ section#testemonials {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* footer section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* footer section  *-*-*-*-*-*-*-*-*-*/
 
 footer#footer {
     background-color: var(--color-primary);
@@ -460,20 +548,95 @@ footer#footer {
     height: 400px;
 }
 
-/**-*-*-*-*-*-*-*-* media (max-width: 1000px)  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* media (max-width: 1000px)  *-*-*-*-*-*-*-*-*-*/
 
 @media screen and (max-width: 1000px) {
+
     a:link,
     a:visited {
         font-size: calc(1rem + 1vw);
     }
 }
 
-/**-*-*-*-*-*-*-*-* media (max-width: 600px)  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* media (max-width: 800px)  *-*-*-*-*-*-*-*-*-*/
+
+@media screen and (max-width: 800px) {
+
+    /*-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*/
+    section#booking-content {
+        padding: 4vh 3vw;
+        grid-column: center-start / center-end;
+    }
+
+    .booking-content__title {
+        text-align: center;
+    }
+
+    .booking-content__title::after {
+        width: 20%;
+        left: 40%;
+    }
+
+    /*-*-*-*-*-*-*-*-* booking-date section  *-*-*-*-*-*-*-*-*/
+
+    section#booking-date {
+        padding: 4vh 3vw;
+        grid-column: center-start / center-end;
+        grid-row-gap: 7vh;
+    }
+
+    .booking-date__schedule__arrival>div,
+    .booking-date__schedule__departure>div,
+    .booking-date__schedule__guests>div {
+        padding: 2rem;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content;
+        grid-column-gap: 2vw;
+        place-items: center;
+    }
+}
+
+/*-*-*-*-*-*-*-*-*-* media (max-width: 600px)  *-*-*-*-*-*-*-*-*-*/
 
 @media screen and (max-width: 600px) {
-    /**-*-*-*-*-*-*-*-* header section  *-*-*-*-*-*-*-*-*-*/
+
+    /*-*-*-*-*-*-*-*-* header section  *-*-*-*-*-*-*-*-*/
     .header__main-content__content__pg {
         font-size: 2rem;
+    }
+
+    /*-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*/
+    .booking-content__pg {
+        font-size: 1.5rem;
+    }
+
+    /*-*-*-*-*-*-*-*-* booking-date section  *-*-*-*-*-*-*-*-*/
+    section#booking-date {
+        grid-template-rows: repeat(2, max-content);
+    }
+
+    .booking-date__schedule__arrival>div,
+    .booking-date__schedule__departure>div,
+    .booking-date__schedule__guests>div {
+        padding: 4rem;
+        grid-template-columns: min-content;
+    }
+}
+
+/*-*-*-*-*-*-*-*-*-* media (max-width: 400px)  *-*-*-*-*-*-*-*-*-*/
+
+@media screen and (max-width: 400px) {
+    
+    /*-*-*-*-*-*-*-*-* booking-date section  *-*-*-*-*-*-*-*-*/
+    .booking-date__schedule {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto;
+        grid-row-gap: 4vh;
+    }
+
+    .booking-date__contact {
+        justify-self: center;
+        padding: 0 2rem;
     }
 }
