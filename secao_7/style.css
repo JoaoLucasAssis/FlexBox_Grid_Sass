@@ -468,7 +468,7 @@ section#booking-date {
     font-size: 2rem;
 }
 
-/*-*-*-*-*-*-*-*-*-* villas section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* villas section *-*-*-*-*-*-*-*-*-*/
 
 section#villas {
     grid-column: container-start / container-end;
@@ -583,7 +583,7 @@ div[class^="villas"] a[class^="villas"]:active::before {
             var(--color-tertiary-m-light)), url(img/Villas/villa-6.jpg);
 }
 
-/*-*-*-*-*-*-*-*-*-* motto section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* motto section *-*-*-*-*-*-*-*-*-*/
 
 section#motto {
     background-color: var(--color-primary);
@@ -617,7 +617,7 @@ section#motto {
     background-color: white;
 }
 
-/*-*-*-*-*-*-*-*-*-* events-content section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* events-content section *-*-*-*-*-*-*-*-*-*/
 
 section#events-content {
     grid-column: container-start / col-end 9;
@@ -673,15 +673,30 @@ section#events-content>div>p[class*=title] {
     color: white;
 }
 
-/*-*-*-*-*-*-*-*-*-* events-text section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* events-text section *-*-*-*-*-*-*-*-*-*/
 
 section#events-text {
-    background-color: var(--color-primary);
+    background-color: var(--color-tertiary);
     grid-column: col-start 10 / center-end;
-    height: 400px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
 }
 
-/*-*-*-*-*-*-*-*-*-* gallery-text section  *-*-*-*-*-*-*-*-*-*/
+.events-text__content {
+    transform: rotate(0.25turn);
+}
+
+.events-text__content__title {
+    font-size: var(--font-size-title);
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+/*-*-*-*-*-*-*-*-*-* gallery-text section *-*-*-*-*-*-*-*-*-*/
 
 section#gallery-text {
     background-color: var(--color-secondary);
@@ -689,7 +704,7 @@ section#gallery-text {
     height: 400px;
 }
 
-/*-*-*-*-*-*-*-*-*-* gallery-carousel section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* gallery-carousel section *-*-*-*-*-*-*-*-*-*/
 
 section#gallery-carousel {
     background-color: var(--color-tertiary);
@@ -697,7 +712,7 @@ section#gallery-carousel {
     height: 400px;
 }
 
-/*-*-*-*-*-*-*-*-*-* features-content section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* features-content section *-*-*-*-*-*-*-*-*-*/
 
 section#features-content {
     background-color: var(--color-primary);
@@ -705,7 +720,7 @@ section#features-content {
     height: 400px;
 }
 
-/*-*-*-*-*-*-*-*-*-* features-text section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* features-text section *-*-*-*-*-*-*-*-*-*/
 
 section#features-text {
     background-color: var(--color-secondary);
@@ -713,7 +728,7 @@ section#features-text {
     height: 400px;
 }
 
-/*-*-*-*-*-*-*-*-*-* testemonials section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* testemonials section *-*-*-*-*-*-*-*-*-*/
 
 section#testemonials {
     background-color: var(--color-tertiary);
@@ -721,7 +736,7 @@ section#testemonials {
     height: 400px;
 }
 
-/*-*-*-*-*-*-*-*-*-* footer section  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* footer section *-*-*-*-*-*-*-*-*-*/
 
 footer#footer {
     background-color: var(--color-primary);
@@ -729,7 +744,7 @@ footer#footer {
     height: 400px;
 }
 
-/*-*-*-*-*-*-*-*-*-* media (max-width: 1000px)  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* media (max-width: 1000px) *-*-*-*-*-*-*-*-*-*/
 
 @media screen and (max-width: 1000px) {
 
@@ -739,7 +754,7 @@ footer#footer {
     }
 }
 
-/*-*-*-*-*-*-*-*-*-* media (max-width: 800px)  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* media (max-width: 800px) *-*-*-*-*-*-*-*-*-*/
 
 @media screen and (max-width: 800px) {
 
@@ -784,16 +799,16 @@ footer#footer {
 
 }
 
-/*-*-*-*-*-*-*-*-*-* media (max-width: 600px)  *-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-* media (max-width: 600px) *-*-*-*-*-*-*-*-*-*/
 
 @media screen and (max-width: 600px) {
 
-    /*-*-*-*-*-*-*-*-* header section  *-*-*-*-*-*-*-*-*/
+    /*-*-*-*-*-*-*-*-* header section *-*-*-*-*-*-*-*-*/
     .header__main-content__content__pg {
         font-size: 2rem;
     }
 
-    /*-*-*-*-*-*-*-*-* booking-content section  *-*-*-*-*-*-*-*-*/
+    /*-*-*-*-*-*-*-*-* booking-content section *-*-*-*-*-*-*-*-*/
     .booking-content__pg,
     div[class^="villas"] p[class^="villas"],
     .motto__content__pg,
@@ -801,7 +816,7 @@ footer#footer {
         font-size: 1.5rem;
     }
 
-    /*-*-*-*-*-*-*-*-* booking-date section  *-*-*-*-*-*-*-*-*/
+    /*-*-*-*-*-*-*-*-* booking-date section *-*-*-*-*-*-*-*-*/
     section#booking-date {
         grid-template-rows: repeat(2, max-content);
     }
@@ -813,13 +828,17 @@ footer#footer {
         grid-template-columns: min-content;
     }
 
-    /*-*-*-*-*-*-*-*-* villas section  *-*-*-*-*-*-*-*-*/
+    /*-*-*-*-*-*-*-*-* villas section *-*-*-*-*-*-*-*-*/
     div[class^="villas"] p[class^="villas"] {
         margin: 1.5rem 0 4rem 0;
     }
 
 
-    /*-*-*-*-*-*-*-*-* events-content section  *-*-*-*-*-*-*-*-*/
+    /*-*-*-*-*-*-*-*-* events-content section *-*-*-*-*-*-*-*-*/
+    section#events-text {
+        display: none;
+    }
+
     section#events-content {
         grid-column: center-start / center-end;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
