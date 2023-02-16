@@ -760,9 +760,89 @@ section#features-text {
 /*-*-*-*-*-*-*-*-*-* testemonials section *-*-*-*-*-*-*-*-*-*/
 
 section#testemonials {
-    background-color: var(--color-tertiary);
     grid-column: center-start / center-end;
-    height: 400px;
+    padding: var(--padding-section);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 28rem);
+    grid-gap: 5rem;
+    place-content: center;
+}
+
+.testemonials__card {
+    width: 28rem;
+    height: 50rem;
+    position: relative;
+}
+
+.testemonials__card__front,
+.testemonials__card__back {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all var(--transition-duration);
+    backface-visibility: hidden;
+    transform: perspective(100rem);
+
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    padding: 3rem;
+}
+
+.testemonials__card__front h2 {
+    background-color: var(--color-secondary-m-light);
+    padding: 1rem;
+    border-radius: 0 0 50% 50%;
+}
+
+.testemonials__card__back p {
+    place-self: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.testemonials__card__back {
+    transform: perspective(100rem) rotateY(0.5turn);
+    background-color: var(--color-secondary);
+}
+
+.testemonials__card:hover .testemonials__card__front {
+    transform: perspective(100rem) rotateY(0.5turn);
+}
+
+.testemonials__card:hover .testemonials__card__back {
+    transform: perspective(100rem) rotateY(1turn);
+}
+ 
+.testemonials__card:first-child .testemonials__card__front {
+    background-image: url(img/Testimonials/testimonials-1.jpg);
+}
+
+.testemonials__card:nth-child(2) .testemonials__card__front {
+    background-image: url(img/Testimonials/testimonials-2.jpg);
+}
+
+.testemonials__card:nth-child(3) .testemonials__card__front {
+    background-image: url(img/Testimonials/testimonials-3.jpg);
+}
+
+.testemonials__card:nth-child(4) .testemonials__card__front {
+    background-image: url(img/Testimonials/testimonials-4.jpg);
+}
+
+.testemonials__card:nth-child(5) .testemonials__card__front {
+    background-image: url(img/Testimonials/testimonials-5.jpg);
+}
+
+.testemonials__card:last-child .testemonials__card__front {
+    background-image: url(img/Testimonials/testimonials-6.jpg);
 }
 
 /*-*-*-*-*-*-*-*-*-* footer section *-*-*-*-*-*-*-*-*-*/
