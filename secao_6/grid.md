@@ -288,7 +288,7 @@ grid-template-columns: repeat(auto-fill, 150px); /*cria três colunas com 150px*
 
 ### Auto Fit Value
 
-`auto-fill` preenche o espaço disponível com quantos itens existirem, até ocupar todo o espaço
+`auto-fit` preenche o espaço disponível com quantos itens existirem, até ocupar todo o espaço
 
 ```css
 width: 1000px;
