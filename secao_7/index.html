@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet">
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0b87b0e801.js" crossorigin="anonymous"></script>
+
     <!-- favicon -->
     <link rel="shortcut icon" type="image/svg" href="img/hotel-solid.svg">
+
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
+
     <title>Vision Luxury Villas | True Relaxations</title>
 </head>
 
@@ -197,7 +201,70 @@
     </section>
 
     <section id="gallery-carousel">
-        gallery-carousel
+        <button class="gallery-carousel__btn gallery-carousel__btn-left hidden">
+            <i class="fas fa-caret-left"></i>
+        </button>
+
+        <div class="gallery-carousel__img-container">
+            <ul class="gallery-carousel__img-container__list">
+                <li class="gallery-carousel__img-container__list__item current-img">
+                    <img src="img/Gallery/gallery-1.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-2.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-3.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-4.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-5.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-6.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-7.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-8.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-9.jpg" alt="villa">
+                </li>
+
+                <li class="gallery-carousel__img-container__list__item">
+                    <img src="img/Gallery/gallery-10.jpg" alt="villa">
+                </li>
+            </ul>
+        </div>
+
+        <button class="gallery-carousel__btn gallery-carousel__btn-right">
+            <i class="fas fa-caret-right"></i>
+        </button>
+
+        <div class="gallery-carousel__nav">
+            <button class="gallery-carousel__nav__btn current-img"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+            <button class="gallery-carousel__nav__btn"></button>
+        </div>
     </section>
 
     <section id="features-content">
@@ -310,6 +377,8 @@
             </a>
         </div>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
